@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>angus</groupId>
+	<artifactId>PluginDependency</artifactId>
+	<packaging>jar</packaging>
+	<version>0.1</version>
+	<name>PluginDependency</name>
+	<description>Simple utility to keep track of enabled dependencies.</description>
+
+	<developers>
+		<developer>
+			<id>angus</id>
+			<url>https://github.com/anguage</url>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>BSD License 2.0 (3-clause BSD license)</name>
+			<url>https://opensource.org/licenses/BSD-3-Clause</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<properties>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<jar.finalName>${project.name}</jar.finalName>
+	</properties>
+
+	<build>
+		<finalName>${project.name}</finalName>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>spigot-repo</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.15.1-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
